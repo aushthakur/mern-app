@@ -1,5 +1,5 @@
 import React from 'react';
-import careerBg from '../img/Home7.png'; // Adjust the path to your background image
+import careerBg from '../img/Home10.png'; // Adjust the path to your background image
 import mobileview from '../img/careermobile.png'
 
 const CareerSection = () => {

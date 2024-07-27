@@ -4,16 +4,16 @@ import logo from '../img/Untitled design (8).png'
 function Footer() {
   return (
     <> 
-       <footer className= "md:block sm:hidden  bg-black sm:text-sm text-gray-500 p-1">
-      <div className="container mx-auto p-9 flex flex-col md:flex-row justify-between items-center">
+       <footer className= "md:block sm:hidden lg:overflow-hidden bg-black sm:text-sm text-gray-500 p-1">
+      <div className="container mx-auto flex flex-col p-9 md:flex-row justify-between items-center">
         <div className="flex flex-col md:flex-row">
           <div className="mr-6">
             <a href="#" className="font-bold text-sm py-1 px-1 ">
             <img src={logo} alt="Logo" className="h-16 mr-4" />
             </a>
             <div className='gap-3'>
-           <input type="email" placeholder='Your Email Address' className='bg-zinc-700 text-slate-300 rounded m-1 px-7 py-1.5 text-sm outline-none ' />
-           <button className='bg-zinc-700 rounded text-white py-1.5 px-4 border-zinc-700'>Subscribe</button>
+           <input type="email" placeholder='Your Email Address' className='bg-zinc-700 text-slate-300  outline-none  rounded m-1 px-7 py-1.5 text-sm  ' />
+           <button className='bg-zinc-700 text-slate-300 rounded py-1 px-3'>Subscribe</button>
            </div>
           </div>
 
@@ -87,7 +87,7 @@ function Footer() {
       </p>
     </footer>
     {/* mobileview */}
-    <footer className="sm:block md:hidden bg-black  text-gray-500 p-9">
+    <footer className="sm:block  md:hidden overflow-hidden bg-black  text-gray-500 p-9">
       <div className="container  flex justify-between items-center">
         <div className="flex  text-[9px] ">
 
@@ -106,21 +106,21 @@ function Footer() {
             </div> 
             
           </div>
-          <div className="items-center">
-            <h4 className=" mb-2  mx-3 pl-5">Work Inquiries</h4>
-            <ul className=" pl-9">
+          <div className="items-center pl-0">
+            <h4 className=" mb-2  mx-2 pl-0">Work Inquiries</h4>
+            <ul className=" pl-[-29px]">
               <li>
                 <a href="#" className="text-white hover:underline">
                   Interested Working with us
                 </a>
               </li>
               <li>
-                <a href="#" className=" hover:underline">
+                <a href="mailto:info@digitaldrivesolution.com" className=" hover:underline">
                   info@digitaldrivesolution.com
                 </a>
               </li>
               <li>
-                <a href="#" className=" hover:underline">
+                <a href="mailto:inquiry@digitaldrivesolution.com" className=" hover:underline">
                   inquiry@digitaldrivesolution.com
                 </a>
               </li>
@@ -131,46 +131,33 @@ function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:underline">
+                <a href="tel:8930318532" className="text-white hover:underline">
                   +91-8930318532
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:underline">
-                  +91 8168439591
+                <a href="tel:8168439591" className="text-white hover:underline">
+                  +91-8168439591
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="flex  ">
-          <div className="mr-4">
-            <a href="#" className="mr-2">
-              <i className="fab fa-linkedin-in text-blue-500"></i>
-            </a>
-            <a href="#" className="mr-2">
-              <i className="fab fa-facebook-f text-blue-600"></i>
-            </a>
-            <a href="#" className="mr-2">
-              <i className="fab fa-instagram text-pink-500"></i>
-            </a>
-          </div>
         
-        </div>
+   
       </div>
       <div className="mr-0 items-center">
-            
-            <div className='gap-3  mt-4 ml-16'>
+           
+            <div className='gap-3 flex py-0.5 ml-0 mt-6'>
            <input type="email" placeholder='Your Email Address' className='bg-zinc-700 text-slate-300 rounded m-1 px-7 py-1.5 text-[9px]  ' />
-           <button className='bg-zinc-700 text-[9px] rounded text-white py-1 px-3'>Subscribe</button>
-          
+           <button className='bg-zinc-700 text-slate-300 text-[9px] rounded py-1  px-3'>Subscribe</button>
            </div>
            <a href="#" className="font-bold text-sm py-1 px-1 ">
             <img src={logo} alt="Logo" className="h-16  ml-16" />
             </a>
           </div>
       <p className="mt-4 text-center text-sm">
-        &copy; {new Date().getFullYear()} Digital Drive Solution. All rights reserved.
+        &copy; {new Date().getFullYear()} Digital Drive. All rights reserved.
       </p>
     </footer>
     </>

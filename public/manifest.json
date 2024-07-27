@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "DDS",
+  "name": "Digital Drive Solution",
+  "description": "Digital Marketing Agency - Faridabad | Website Development | App Development | Advertising and Branding | Social Media Management",
+
   "icons": [
     {
       "src": "favicon.ico",

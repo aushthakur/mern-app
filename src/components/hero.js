@@ -52,9 +52,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-black text-white p-6 relative h-screen w-full flex md:items-center sm:items-end">
+    <section className="bg-black  text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
       <div className="absolute inset-0 bg-cover bg-center brightness-110 opacity-70 sm:p-0 h-full w-full">
-        <img src={heroImage} alt="" className="hidden md:block w-full h-full object-cover" />
+        <img src={heroImage} alt="" className="hidden overflow-hidden md:block w-full h-full object-cover" />
         <img src={mobileImage} alt="" className="md:hidden w-full object-cover" />
       </div>
       <div className="relative z-10 container mx-auto px-4 flex justify-between items-center mt-12">
@@ -63,17 +63,17 @@ const Hero = () => {
             Empower Your Business With <br /> Building <span className="text-white font-extrabold">Digital Presence</span> <br /> and <span className="text-white font-extrabold">Brand Identity</span>.
           </h1>
           <button
-            className="bg-gray-900 sm:mb-32 hover:bg-gray-700 text-white text-xl font-bold py-2 px-4 mt-3 letter-spacing: 0.025em rounded"
+            className="bg-gray-900 sm:mb-32 sm:text-sm md:text-lg hover:bg-gray-700 text-white text-xl font-bold py-2 px-4 mt-3 letter-spacing: 0.025em rounded"
             onClick={handleGetQuote}
           >
             Get a Quote
           </button>
         </div>
         <div className="hidden md:flex flex-col space-y-5 fixed right-0 top-1/2 transform -translate-y-1/2 mr-4">
-          <SocialLink href="https://www.linkedin.com" icon={FaLinkedin} colorClass={iconColor} />
-          <SocialLink href="https://www.instagram.com" icon={FaInstagram} colorClass={iconColor} />
-          <SocialLink href="https://telegram.org" icon={FaTelegram} colorClass={iconColor} />
-          <SocialLink href="https://www.facebook.com" icon={FaFacebook} colorClass={iconColor} />
+          <SocialLink href="https://www.linkedin.com/company/digital-drive-solution/about/" icon={FaLinkedin} colorClass={iconColor} />
+          <SocialLink href="https://www.instagram.com/digitaldrive.solution/" icon={FaInstagram} colorClass={iconColor} />
+          <SocialLink href="https://t.me/digitaldrivesolution" icon={FaTelegram} colorClass={iconColor} />
+          <SocialLink href="https://www.facebook.com/profile.php?id=61561321901474" icon={FaFacebook} colorClass={iconColor} />
           <SocialLink href="https://www.twitter.com" icon={FaTwitter} colorClass={iconColor} />
         </div>
       </div>

@@ -4,7 +4,7 @@ import design from "../img/Home6.png";
 
 function Hero3() {
   return (
-    <div className="flex  sm:flex-col md:flex-row  md:h-screen sm:py-0 md:mt-28">
+    <div className="flex lg:overflow-hidden sm:flex-col md:flex-row  md:h-screen sm:py-0 md:mt-28">
       <div
         className="md:w-1/2 md:h-screen sm:w-full sm:py-20   flex flex-col justify-center  p-2"
         style={{
