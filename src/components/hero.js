@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import mobileImage from '../img/mobileview.jpg';
-import heroImage from '../img/hero.jpg';
+import mobileImage from '../img/mobileview.png';
+import heroImage from '../img/Home.png';
 import { FaLinkedin, FaInstagram, FaTelegram, FaFacebook, FaTwitter, FaTimes } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -27,7 +27,7 @@ const Hero = () => {
         const isDarkBackground = bgColor === 'rgb(0, 0, 0)';
         setIconColor(isDarkBackground ? 'text-white' : 'text-black');
       } else {
-        setIconColor('text-white'); // Default to white if no valid element is found
+        setIconColor('text-[#ff3131]'); // Default to white if no valid element is found
       }
     };
 
@@ -52,18 +52,35 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-black  text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
-      <div className="absolute inset-0 bg-cover bg-center brightness-110 opacity-70 sm:p-0 h-full w-full">
+    <section className="  text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
+      <div className="absolute inset-0 bg-cover bg-center brightness-110  sm:p-0 h-full w-full">
         <img src={heroImage} alt="" className="hidden overflow-hidden md:block w-full h-full object-cover" />
         <img src={mobileImage} alt="" className="md:hidden w-full object-cover" />
       </div>
       <div className="relative z-10 container mx-auto px-4 flex justify-between items-center mt-12">
         <div className="">
-          <h1 className="text-xl sm:text-2xl sm:mb-8 text-slate-300 tracking-wider pt-30 md:text-4xl mb-2 mt-9 text-left">
-            Empower Your Business With <br /> Building <span className="text-white font-extrabold">Digital Presence</span> <br /> and <span className="text-white font-extrabold">Brand Identity</span>.
-          </h1>
+        <h1 className="text-black tracking-wider mt-4 text-left sm:mb-8 mb-4 md:mb-2 lg:mt-9">
+  <div className="sm:hidden mt-6 bg-white p-4 rounded-lg text-base leading-tight max-w-xs mx-auto"> {/* Mobile view */}
+  Empowering Global Business<span className="text-[#ff3131] font-extrabold">Growth </span>through Digital Marketing <span className="text-[#ff3131] font-extrabold">& B2B Podcasts</span>.
+  </div>
+
+  
+  <div className="hidden sm:block text-lg sm:text-xl md:text-2xl lg:text-4xl"> {/* Larger screens */}
+  Empowering Global Business
+  Growth through<span className="text-[#ff3131] font-extrabold"> Digital Marketing </span> 
+    and <span className="text-[#ff3131] font-extrabold">& B2B Podcasts</span>.
+  </div>
+</h1>
+<p className="text-black sm:hidden md:block lg:block " >Boostpod, a vertical of <span className='text-[#ff3131] font-bold'>Techno E-Services Group Ltd.</span>
+  in the UK, is pioneering business growth by merging digital marketing expertise 
+  with a unique B2B podcast series. Our podcasts feature leading entrepreneurs and
+  industry trailblazers sharing their journeys, challenges, and strategies for scaling 
+  success. At Boostpod, we’re more than a digital agency; we’re a platform connecting 
+  global brands through insightful, actionable content designed to inspire and drive results.</p>
+
+
           <button
-            className="bg-gray-900 sm:mb-32 sm:text-sm md:text-lg hover:bg-gray-700 text-white text-xl font-bold py-2 px-4 mt-3 letter-spacing: 0.025em rounded"
+            className="bg-[#ff3131] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 sm:mb-32 sm:text-sm md:text-lg hover:bg-black text-white text-xl font-bold py-2 px-4 mt-5 letter-spacing: 0.025em rounded"
             onClick={handleGetQuote}
           >
             Get a Quote
@@ -83,8 +100,8 @@ const Hero = () => {
 
       {/* Floating WhatsApp Button */}
       <FloatingWhatsApp
-        phoneNumber="+918930318532" // Replace with your desired phone number
-        accountName="Digital Drive Solution"
+        phoneNumber="+447435632174" // Replace with your desired phone number
+        accountName="Sophia"
         allowEsc
         allowClickAway
         notification

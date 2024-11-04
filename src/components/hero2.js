@@ -1,88 +1,64 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import hero2 from "../img/hero2.jpg"
-import { faDesktop, faArrowUp, faBullhorn, faUserFriends, faMobileAlt, faLightbulb, faGamepad } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-function App() {
-  return (
-    <div className="flex lg:overflow-hidden  md:flex-row  md:mt-0  sm:text-sm sm:flex-col">
-      <div className="w-full sm:hidden md:block md:w-1/2 bg-cover bg-center sm:mt-3 sm:bg-top-0  md:mt-8: " style={{ backgroundImage: `url(${hero2})` }}>
-        <h2 className=" md:mt-0 sm:mt-32 sm:text-3xl sm:text-center sm:mt md:text-4xl ">Our viewpoint is <span className='font-bold'>innovative</span>, and our <span className='font-bold'> creations </span> are one-of-a-kind.</h2>
-      </div>
-        <h2 className=" md:hidden sm:block md:mt-0 sm:mt-32 sm:text-3xl sm:text-center sm:mt md:text-4xl ">Our viewpoint is <span className='font-bold'>innovative</span>, and our <span className='font-bold'> creations </span> are one-of-a-kind.</h2>
-      <div className="w-full  md:w-1/2 p-12">
-        <div className="  flex flex-wrap justify-center md:text-md md:flex-wrap">
-          <div className="w-full  md:w-1/2 xl:w-1/3 pt-5">
-            <FontAwesomeIcon icon={faDesktop} className="md:text-4xl mb-3 text-3xl" />
-            <h3 className="text-xl font-bold">Web Design & Development</h3>
-            <p>We utilize the intensity of structure to tackle complex issues and change.</p>
-           <Link to='/Weblearn'> <button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-2 rounded-full">Learn More</button></Link>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-1/3 py-4">
-            <FontAwesomeIcon icon={faBullhorn} className="text-4xl mb-2 sm:text-3xl" />
-            <h3 className="text-xl font-bold">Digital Marketing</h3>
-            <p>We have successfully generated many lead campaigns for multiple brands.</p>
-            <Link to='/Digitallearn'><button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-9 rounded-full">Learn More</button></Link>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-1/3  p-3">
-            <FontAwesomeIcon icon={faUserFriends} className="text-4xl mb-2 sm:text-3xl" />
-            <h3 className="text-xl font-bold">Social Media Management</h3>
-            <p>We are passionate about handling social media accounts and engagement on your social profiles.</p>
-            <Link to='/Sociallearn'><button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-5   rounded-full">Learn More</button></Link>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-1/3 p-4">
-            <FontAwesomeIcon icon={faMobileAlt} className="text-4xl mb-2 sm:text-3xl" />
-            <h3 className="text-xl font-bold">App Development</h3>
-            <p>We offer you Android and IOS app developments with maximum customization.</p>
-           <Link to='/Applearn'><button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-10 rounded-full">Learn More</button></Link>
-          </div>
-          <div className="w-full  md:w-1/2 xl:w-1/3 p-4">
-            <FontAwesomeIcon icon={faLightbulb} className="text-4xl mb-3 sm:text-3xl" />
-            <h3 className="text-xl font-bold">Brand Identity and Strategy</h3>
-            <p>We help digital companies to volume their self-interest and get a space.</p>
-            <Link to='/Brandlearn'><button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-2 rounded-full">Learn More</button></Link>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-1/3 p-4">
-            <FontAwesomeIcon icon={faGamepad} className="md:text-4xl mb-2 sm:text-3xl" />
-            <h3 className="text-xl font-bold">Game Development</h3>
-            <p>We offer you multiplayer game development, casino game development and many more.</p>
-            <Link to='/Gamelearn'><button className="bg-gray-900 hover:bg-gray-700 text-white font-bold py-2 px-4 mt-4 rounded-full">Learn More</button></Link>
-          </div>
-        </div>
-      </div>
+import Slider from 'react-slick';
+import logo1 from '../img/1.png';
+import logo2 from '../img/2.png';
+import logo3 from '../img/3.png';
+import logo4 from '../img/4.png';
+import logo5 from '../img/5.png';
+import logo6 from '../img/6.png';
+import logo7 from '../img/7.png';
+import logo8 from '../img/8.png';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-      {/* Mobile view */}
-      {/* <div className="md:hidden sm:block flex flex-col p-4">
-        <h2 className="text-sm mb-4">Our Services</h2>
-        <div className="flex flex-wrap justify-center">
-         <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faDesktop} className="text-sm" />
-            <h3 className="text-xl font-bold">Web Design & Development</h3>
-          </div>
-          <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faBullhorn} className="text-2xl" />
-            <h3 className="text-xl font-bold">Digital Marketing</h3>
-          </div>
-          <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faUserFriends} className="text-2xl" />
-            <h3 className="text-xl font-bold">Social Media Management</h3>
-          </div>
-          <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faMobileAlt} className="text-2xl" />
-            <h3 className="text-xl font-bold">App Development</h3>
-          </div>
-          <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faLightbulb} className="text-2xl" />
-            <h3 className="text-xl font-bold">Brand Identity and Strategy</h3>
-          </div>
-          <div className="w-1/2 p-2">
-            <FontAwesomeIcon icon={faGamepad} className="text-2xl" />
-            <h3 className="text-xl font-bold">Game Development</h3>
-          </div>
-        </div>
-      </div> */}
+function LogoCarousel() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 5, 
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    nextArrow: <CustomArrow />,
+    prevArrow: <CustomArrow />,
+  };
+
+  function CustomArrow(props) {
+    const { className, onClick, style } = props;
+    return (
+      <div
+        className={className}
+        onClick={onClick}
+        style={{ ...style, color: 'black', fontSize: '30px' }}
+      />
+    );
+  }
+
+  return (
+    <div className="flex items-center overflow-hidden my-8">
+      {/* Static "Certification" label on the left */}
+      <div className="w-64 ml-10 flex-shrink-0 text-xl text-gray-700">
+        Working Partners
+      </div>
+      
+      {/* Logo slider */}
+      <div className="w-full">
+        <Slider {...settings} className="flex  items-center">
+          {[logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8].map((logo, index) => (
+            <div key={index} className="flex  items-center justify-center p-2">
+              <img
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                className="w-52 h-20 object-contain" // Adjust as needed
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default LogoCarousel;

@@ -15,7 +15,7 @@ const Preloader = () => {
   };
 
   const imgStyle = {
-    width: '100px', // Adjust the size as needed
+    width: '1000px', // Adjust the size as needed
     height: 'auto',
   };
 

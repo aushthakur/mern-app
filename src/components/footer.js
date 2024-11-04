@@ -1,167 +1,112 @@
 import React from 'react';
-import logo from '../img/Untitled design (8).png'
+import logo from '../img/Untitled design (8).png';
 
 function Footer() {
   return (
-    <> 
-       <footer className= "md:block sm:hidden lg:overflow-hidden bg-black sm:text-sm text-gray-500 p-1">
-      <div className="container mx-auto flex flex-col p-9 md:flex-row justify-between items-center">
-        <div className="flex flex-col md:flex-row">
-          <div className="mr-6">
-            <a href="#" className="font-bold text-sm py-1 px-1 ">
-            <img src={logo} alt="Logo" className="h-16 mr-4" />
-            </a>
-            <div className='gap-3'>
-           <input type="email" placeholder='Your Email Address' className='bg-zinc-700 text-slate-300  outline-none  rounded m-1 px-7 py-1.5 text-sm  ' />
-           <button className='bg-zinc-700 text-slate-300 rounded py-1 px-3'>Subscribe</button>
-           </div>
+    <>
+      <footer className="bg-white text-gray-800 py-10">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-start px-6">
+          {/* Logo and Description */}
+          <div className="mb-8 md:mb-0">
+            <img src={logo} alt="Logo" className=" h-20 mb-4" />
+            <p className="text-sm">
+             Boostpod is a vertical of  <br/>Techno e-Services Group Ltd. <br />pioneering business growth<br /> by merging digital marketing <br />expertise with a unique B2B<br /> podcast series. 
+            </p>
+            <p className="text-lg font-semibold mt-4 text-[#ff3131]">
+            £50 MILLION + IN CLIENT <br />GROWTH AND STILL RISING
+            </p>
           </div>
 
-          <div className="mr-32 mt-6">
-            <h4 className=" mx-3 mb-2">Services</h4>
-            
-            <ul className=" text-sm  text-white pl-4">
-            <a href="">  <li>Web Design and Devlopment</li> </a>
-            <a href="">  <li>Android / IOS Devlopment</li></a>
-            <a href=""> <li>Social Media Manage Ment</li></a>
-            <a href=""> <li>Brand Identity & Management</li></a>
-            <a href="">   <li>Digital Marketing</li></a>
-            <a href="">  <li>Influencer Marketing</li></a>
-            </ul>
-            
-          </div>
-          <div className="mr-6 mt-6">
-            <h4 className=" mb-2  mx-3">Work Inquiries</h4>
-            <ul className=" pl-4">
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  Interested Working with us
-                </a>
-              </li>
-              <li>
-                <a href="#" className=" hover:underline">
-                  info@digitaldrivesolution.com
-                </a>
-              </li>
-              <li>
-                <a href="#" className=" hover:underline">
-                  inquiry@digitaldrivesolution.com
-                </a>
-              </li>
-              <li>
-                <br />
-                <a href="#" className="  hover:underline">
-                  Phone
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  +91-8930318532
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  +91 8168439591
-                </a>
-              </li>
+          {/* Services Section */}
+          <div className="mb-8 md:mb-0">
+            <h4 className="font-semibold text-lg mb-3">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">SaaS SEO</a></li>
+              <li><a href="#" className="hover:underline">SaaS Website Development</a></li>
+              <li><a href="#" className="hover:underline">E-commerce SEO</a></li>
+              <li><a href="#" className="hover:underline">E-commerce Website Development</a></li>
+              <li><a href="#" className="hover:underline">Shopify SEO</a></li>
+              <li><a href="#" className="hover:underline">Shopify Website Design</a></li>
             </ul>
           </div>
-        </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="mr-4">
-            <a href="#" className="mr-2">
-              <i className="fab fa-linkedin-in text-blue-500"></i>
-            </a>
-            <a href="#" className="mr-2">
-              <i className="fab fa-facebook-f text-blue-600"></i>
-            </a>
-            <a href="#" className="mr-2">
-              <i className="fab fa-instagram text-pink-500"></i>
-            </a>
-          </div>
-        
-        </div>
-      </div>
-      <p className="mt-4 text-center text-sm">
-        &copy; {new Date().getFullYear()} Digital Drive. All rights reserved.
-      </p>
-    </footer>
-    {/* mobileview */}
-    <footer className="sm:block  md:hidden overflow-hidden bg-black  text-gray-500 p-9">
-      <div className="container  flex justify-between items-center">
-        <div className="flex  text-[9px] ">
 
-        
-          <div className="mr-0 w-40 ">
-            <h4 className=" mx-3 mb-2 pl-3  ">Services</h4>
-           <div className=''>
-            <ul className="  text-[8px] w-full px-10 gap-1   text-white pl-6">
-            <a href="" >  <li>Web Design and Devlopment</li> </a>
-            <a href="">  <li>Android / IOS Devlopment</li></a>
-            <a href=""> <li>Social Media Manage Ment</li></a>
-            <a href=""> <li>Brand Identity & Management</li></a>
-            <a href="">   <li>Digital Marketing</li></a>
-            <a href="">  <li>Influencer Marketing</li></a>
+          {/* Business Section */}
+          <div className="mb-8 md:mb-0">
+            <h4 className="font-semibold text-lg mb-3">Business</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">SaaS</a></li>
+              <li><a href="#" className="hover:underline">Shopify Expertise</a></li>
+              <li><a href="#" className="hover:underline">E-commerce</a></li>
             </ul>
-            </div> 
-            
           </div>
-          <div className="items-center pl-0">
-            <h4 className=" mb-2  mx-2 pl-0">Work Inquiries</h4>
-            <ul className=" pl-[-29px]">
-              <li>
-                <a href="#" className="text-white hover:underline">
-                  Interested Working with us
-                </a>
-              </li>
-              <li>
-                <a href="mailto:info@digitaldrivesolution.com" className=" hover:underline">
-                  info@digitaldrivesolution.com
-                </a>
-              </li>
-              <li>
-                <a href="mailto:inquiry@digitaldrivesolution.com" className=" hover:underline">
-                  inquiry@digitaldrivesolution.com
-                </a>
-              </li>
-              <li>
-                <br />
-                <a href="#" className="  hover:underline">
-                  Phone
-                </a>
-              </li>
-              <li>
-                <a href="tel:8930318532" className="text-white hover:underline">
-                  +91-8930318532
-                </a>
-              </li>
-              <li>
-                <a href="tel:8168439591" className="text-white hover:underline">
-                  +91-8168439591
-                </a>
-              </li>
+
+          {/* About Us Section */}
+          <div className="mb-8 md:mb-0">
+            <h4 className="font-semibold text-lg mb-3">About Us</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Who We Are</a></li>
+              <li><a href="#" className="hover:underline">Careers</a></li>
+              <li><a href="#" className="hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Resources Section */}
+          <div>
+            <h4 className="font-semibold text-lg mb-3">Resources</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="hover:underline">Podcast</a></li>
+              <li><a href="#" className="hover:underline">Blog</a></li>
+              <li><a href="#" className="hover:underline">Case Study</a></li>
+              <li><a href="#" className="hover:underline">Best Shopify Apps</a></li>
+              <li><a href="#" className="hover:underline">Top Citation Sites</a></li>
             </ul>
           </div>
         </div>
-        
-   
-      </div>
-      <div className="mr-0 items-center">
-           
-            <div className='gap-3 flex py-0.5 ml-0 mt-6'>
-           <input type="email" placeholder='Your Email Address' className='bg-zinc-700 text-slate-300 rounded m-1 px-7 py-1.5 text-[9px]  ' />
-           <button className='bg-zinc-700 text-slate-300 text-[9px] rounded py-1  px-3'>Subscribe</button>
-           </div>
-           <a href="#" className="font-bold text-sm py-1 px-1 ">
-            <img src={logo} alt="Logo" className="h-16  ml-16" />
-            </a>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-300 mt-10 py-6">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 text-sm">
+            {/* Contact Information */}
+            <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+              <a href="tel:+18882731050" className="flex items-center mb-1 text-gray-800 hover:underline">
+                <i className="fas fa-phone-alt mr-2 text-blue-600"></i> (+44) 01908904853
+              </a>
+              <a href="mailto:hello@wytlabs.com" className="flex items-center mb-1 text-gray-800 hover:underline">
+                <i className="fas fa-envelope mr-2 text-blue-600"></i> info@boostpod.co.uk
+              </a>
+              <p className="flex items-center text-gray-800">
+                <i className="fas fa-map-marker-alt mr-2 text-blue-600"></i> 
+
+                Suite 5 Margaret Powell House, 401-447, <br />Milton Keynes, Buckinghamshire U.K. MK9 3BN              </p>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-800 hover:text-blue-600">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="text-gray-800 hover:text-blue-600">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#" className="text-gray-800 hover:text-blue-600">
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a href="#" className="text-gray-800 hover:text-blue-600">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" className="text-gray-800 hover:text-blue-600">
+                <i className="fab fa-pinterest"></i>
+              </a>
+            </div>
           </div>
-      <p className="mt-4 text-center text-sm">
-        &copy; {new Date().getFullYear()} Digital Drive. All rights reserved.
-      </p>
-    </footer>
+
+          {/* Copyright */}
+          <p className="text-center text-gray-600 mt-4 text-xs">
+            &copy; {new Date().getFullYear()} Boostpod (A Brand of Techno e-Services Ltd.) All Rights Reserved.
+          </p>
+        </div>
+      </footer>
     </>
-
   );
 }
 
