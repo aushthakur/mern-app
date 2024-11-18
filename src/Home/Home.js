@@ -4,7 +4,10 @@ import Hero from '../components/hero'
 import Hero2 from '../components/hero2';
 import Hero3 from '../components/hero3';
 // import careersection from '../components/careerSection'
+import CaseStudiesSolarSystem from '../components/casestudy';
 import Footer from '../components/footer';
+import FireSection from '../components/section5';
+import ContactForm from '../components/contact_section';
 import CareerSection from '../components/careerSection';
 
 const Home = () => {
@@ -13,8 +16,9 @@ const Home = () => {
   
   return (
     <>
-    <div>
-    <div>
+    <div className="app-container">
+    <div className="layout-container">
+  
       { (
         // Your application content
         <div>
@@ -22,15 +26,19 @@ const Home = () => {
           {/* <!-- Your app content here --> */}
         </div>
       )}
-    </div>
+    
    
         <Navbar/>
         <Hero/>
         <Hero2/>
         <Hero3/>
-       <CareerSection/>
+       <CaseStudiesSolarSystem/>
+       <FireSection/>
+       <ContactForm/>
         <Footer/>
     </div>
+    </div>
+    
     </>
   )
 }

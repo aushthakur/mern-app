@@ -10,6 +10,9 @@ import Sociallearn from './components/Sociallearn';
 import Applearn from './components/Applearn';
 import Brandlearn from './components/Brandlearn';
 import Gamelearn from './components/Gamelearn';
+import CaseStudies from './components/casestudy';
+import './App.css'; // Import global CSS
+
 
 
 
@@ -29,6 +32,8 @@ function App() {
   }, []);
 
   return (
+    <div className="app-container">
+      <div className="layout-container">
     <div className="App">
       {loading ? (
         <Preloader />
@@ -47,6 +52,7 @@ function App() {
         </BrowserRouter>
       )}
     </div>
+    </div></div>
   );
 }
 

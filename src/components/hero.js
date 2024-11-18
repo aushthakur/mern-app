@@ -54,7 +54,7 @@ const Hero = () => {
   return (
     <section className="  text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
       <div className="absolute inset-0 bg-cover bg-center brightness-110  sm:p-0 h-full w-full">
-        <img src={heroImage} alt="" className="hidden overflow-hidden md:block w-full h-full object-cover" />
+        <img src={heroImage} alt="" className="hidden overflow-hidden md:block mt-9 w-full h-full object-cover" />
         <img src={mobileImage} alt="" className="md:hidden w-full object-cover" />
       </div>
       <div className="relative z-10 container mx-auto px-4 flex justify-between items-center mt-12">
