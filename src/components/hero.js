@@ -59,21 +59,19 @@ const Hero = () => {
       <img src={mobileImage} alt="" className="md:hidden w-full object-cover sm:mt-auto sm:absolute sm:bottom-0 sm:w-full" />
     </div>
   
-    <div className="relative z-10 container mx-auto px-4 flex sm:flex-col sm:items-center sm:text-center md:flex-row md:items-start md:text-left sm:mt-4 sm:absolute sm:top-4 md:top-auto gap-2">
-      <div className="sm:w-full sm:text-center sm:mt-6 md:w-auto md:text-left">
-        <h1 className="text-black tracking-wider mt-4 text-left sm:mt-6 mb-4 md:mb-2 lg:mt-9">
+    <div className="relative z-10 container mx-auto px-4 flex sm:flex-col sm:items-center sm:text-center md:flex-row md:items-start md:text-left gap-2">
+      <div className="sm:w-full sm:text-center sm:mt-6 md:w-auto md:text-left md:mt-20"> {/* Added margin for full-width */}
+        <h1 className="text-black tracking-wider mt-4 text-left sm:mt-6 mb-4 md:mb-2">
           <div className="contents font-extrabold hidden sm:block text-lg sm:text-xl md:text-2xl lg:text-5xl">
             Fueling Global <br />Growth with<br />
             <span className="text-[#ff3131] font-extrabold">Digital Marketing</span> & <br />
             <span className="text-[#ff3131] font-extrabold">B2B Podcasts</span>
           </div>
         </h1>
-        <br></br>
         <p className="text-black sm:hidden md:block lg:block">
           Join industry leaders sharing real journeys, challenges, and 
           <br />growth strategies, connecting global brands with insights that inspire results
         </p>
-  <br></br>
         <div className="sm:w-full sm:flex sm:justify-center sm:mt-12 md:w-auto md:flex md:justify-start">
           <button
             className="btn bg-[#ff3131] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 sm:mb-32 sm:text-sm md:text-lg hover:bg-black text-white text-xl font-bold py-2 px-4 mt-5 letter-spacing: 0.025em rounded"
@@ -99,9 +97,6 @@ const Hero = () => {
       notificationSound
     />
   </section>
-  
-  
-  
   
   );
 };
