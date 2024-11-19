@@ -11,9 +11,7 @@ import ContactForm from '../components/contact_section';
 import CareerSection from '../components/careerSection';
 
 const Home = () => {
- 
 
-  
   return (
     <>
     <div className="app-container">
@@ -21,13 +19,8 @@ const Home = () => {
   
       { (
         // Your application content
-        <div>
-          <h1>Welcome to my app!</h1>
-          {/* <!-- Your app content here --> */}
-        </div>
+          <></>
       )}
-    
-   
         <Navbar/>
         <Hero/>
         <Hero2/>

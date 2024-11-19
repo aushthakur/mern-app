@@ -14,11 +14,6 @@ import CaseStudies from './components/casestudy';
 import './App.css'; // Import global CSS
 
 
-
-
-
-
-
 function App() {
   const [loading, setLoading] = useState(true);
 
