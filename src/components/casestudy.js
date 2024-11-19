@@ -1,111 +1,72 @@
 import React, { useState } from 'react';
-import logo from '../img/Untitled design (8).png';
-
-const loremText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ".repeat(5).trim();
-
-
-const caseStudies = [
-  { id: 1, title: 'Bluecore', description: loremText, result: '550+' },
-  { id: 2, title: 'Rankwatch', description: loremText, result: '400%' },
-  { id: 3, title: 'TCMD', description: loremText, result: '292%' },
-  { id: 4, title: 'RR Metals', description: loremText, result: '379%' },
-  { id: 5, title: 'Shopify', description: loremText, result: '320%' },
-  { id: 6, title: 'Metify', description: loremText, result: '600+' },
-  { id: 7, title: 'Nextgen', description: loremText, result: '250%' },
-];
+import bordcast from '../img/cuate.png';
+import mick from '../img/bros.png';
+import newImage from '../img/Group 75.png'
+import '../styles/casestudy.css';
 
 const CaseStudiesSolarSystem = () => {
-  const [hoveredCaseStudy, setHoveredCaseStudy] = useState(null);
-  const radius = 225; // Radius for the orbit
+
 
   return (
-    <div className="flex h-screen bg-white relative overflow-hidden">
-      {/* Central Logo (Sun) */}
-      <div
-        className="absolute flex items-center justify-center z-10"
-        style={{
-          left: '17%', // Centered in the left portion
-          top: '57%',
-          transform: 'translateY(-50%)',
-          zIndex: 10,
-        }}
-      >
-        <img src={logo} alt="Logo" className="w-64 h-24" /> {/* Adjust size as necessary */}
+    <section className="p-4 relative h-auto md:h-screen w-full flex flex-col-reverse md:flex-row items-center justify-between lg:overflow-hidden">
+    {/* Container for both Image and Text Section */}
+    <div className="img-responsive flex flex-col md:flex-row items-center justify-between w-full h-auto md:h-full">
+      
+      {/* Image Section */}
+      <div className="flex-1 relative flex justify-center items-center p-4 mb-6 md:order-1"> {/* Set margin-bottom to 6px */}
+        
+        {/* New image for mobile view with increased size */}
+        <img
+          src={newImage} // Replace 'newImage' with the new image path you provide
+          alt="New Image"
+          className="w-full sm:w-[656px] sm:h-auto md:hidden object-contain relative z-10 mb-0" // No margin on mobile
+        />
+        
+        {/* Old Image for larger screens */}
+        <img
+          src={bordcast} // Retain the original image for larger screens
+          alt="Podcast Illustration"
+          className="Podcast w-full sm:w-[545px] sm:h-auto md:w-[734px] md:h-auto object-contain relative z-10 mb-0 md:block hidden" // Removed margin bottom here
+        />
+        
+        {/* Additional Image for Larger Screens (Optional if you want to show it only on larger screens) */}
+        <img
+          src={mick}
+          alt="Microphone Illustration"
+          className="Microphone w-full sm:w-[321px] sm:h-auto md:w-[512px] md:h-auto object-contain absolute top-[90px] left-0 z-0 ml-[232px] mb-0 md:block hidden" // Reduced margin
+        />
       </div>
-
-      {/* Revolving Case Studies with Bounce Effect */}
-      {caseStudies.map((caseStudy, index) => {
-        const angle = (360 / caseStudies.length) * index; // Evenly distribute items around the circle
-        const x = Math.cos((angle * Math.PI) / 180) * radius;
-        const y = Math.sin((angle * Math.PI) / 180) * radius;
-
-        return (
-          <div
-            key={caseStudy.id}
-            style={{
-              position: 'absolute',
-              top: `calc(50% + ${y}px)`,
-              left: `calc(20% + ${x}px)`, // Align with the left logo
-              transformOrigin: `-${x}px -${y}px`,
-              animation: `orbit 10s infinite linear, bounce 2s ease-in-out infinite`,
-              backgroundColor: '#ffffff',
-              padding: '1rem',
-              borderRadius: '50%',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              width: '8rem',
-              height: '8rem',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-            }}
-            className="hover:scale-110 transform transition-transform duration-300"
-            onMouseEnter={() => setHoveredCaseStudy(caseStudy.id)}
-            onMouseLeave={() => setHoveredCaseStudy(null)}
-          >
-            <h3 className="text-xs font-semibold">{caseStudy.title}</h3>
-            <p className="text-red-500 text-lg font-bold">{caseStudy.result}</p>
-          </div>
-        );
-      })}
-
-      {/* Explanation Box */}
-      {hoveredCaseStudy && (
-        <div
-          className="absolute right-96 top-1/2 transform -translate-y-1/2 bg-white p-4 shadow-lg rounded-lg"
-          style={{
-            width: '300px',
-            transition: 'opacity 0.3s ease',
-          }}
-        >
-          <h4 className="text-lg font-semibold">
-            {caseStudies.find(cs => cs.id === hoveredCaseStudy).title}
-          </h4>
-          <p className="text-gray-700">
-            {caseStudies.find(cs => cs.id === hoveredCaseStudy).description}
-          </p>
-          <p className="text-red-500 font-bold">
-            Growth: {caseStudies.find(cs => cs.id === hoveredCaseStudy).result}
+  
+      {/* Text Section */}
+      <div className="content  flex-1 text-center md:text-left p-4 md:order-2">
+        <div className="hh">
+          <h1 className="text-3xl text-black">About <span className="text-3xl text-[#ff3131]">Us</span></h1>
+        </div>
+        <br />
+        <br />
+        <div>
+          <p className='sm:mt-0'>
+            Boostpod is an innovative podcasting platform brought to you by Techno E-Services Group LTD, 
+            designed to empower entrepreneurs, business leaders, and budding startups. 
+            Based in the UK, Boostpod is more than just a podcast; it’s a resource hub for those who seek insight, inspiration, and practical strategies to navigate the complex world of business and technology. 
+            Our episodes dive deep into real-world challenges and solutions as we host thought leaders and industry experts who share their journeys, setbacks, and achievements.
           </p>
         </div>
-      )}
-
-      {/* Inline CSS for custom animations */}
-      <style>{`
-        /* Keyframes for orbiting effect */
-        @keyframes orbit {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-
-        /* Keyframes for bounce effect */
-        @keyframes bounce {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.1); }
-        }
-      `}</style>
+        
+        {/* Read More Button */}
+        <br />
+        <br />
+        <button
+          type="button"
+          className="mt-8 px-6 py-3 bg-[#ff3131] text-white font-bold rounded-lg hover:bg-white hover:text-black transition-colors duration-300"
+        >
+          Read More
+        </button>
+      </div>
     </div>
+  </section>
+  
+
   );
 };
 

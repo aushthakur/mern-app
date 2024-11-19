@@ -37,12 +37,18 @@ function LogoCarousel() {
   }
 
   return (
+    <>
+  
+<div className="text-center text-3xl font-bold mt-5">
+  <h1 className="inline-block  border-b-2 pb-3 border-black w-[320px] mx-auto">Our Working Partners</h1>
+</div>
+
+
+
     <div className="flex items-center overflow-hidden my-8">
       {/* Static "Certification" label on the left */}
-      <div className="w-64 ml-10 flex-shrink-0 text-xl text-gray-700">
-        Working Partners
-      </div>
       
+      <br></br>
       {/* Logo slider */}
       <div className="w-full">
         <Slider {...settings} className="flex  items-center">
@@ -58,6 +64,7 @@ function LogoCarousel() {
         </Slider>
       </div>
     </div>
+    </>
   );
 }
 
