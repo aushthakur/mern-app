@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Fixed Header Section */}
+      Fixed Header Section
       <div className="fixed top-0 left-0 w-full bg-[#2e3c45] text-white py-2 px-8 md:px-16 z-50 flex items-center justify-between">
         <div className="flex items-center justify-between w-full gap-8">
           <span className="text-sm md:text-base lg:text-lg">

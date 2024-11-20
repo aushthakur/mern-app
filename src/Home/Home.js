@@ -9,6 +9,11 @@ import Footer from '../components/footer';
 import FireSection from '../components/section5';
 import ContactForm from '../components/contact_section';
 import CareerSection from '../components/careerSection';
+import ShareYourExperties from '../components/ShareYourExperties';
+import ProfessionalSeo from '../components/ProfessionalSeo';
+import OurServices from '../components/OurServices';
+import SeoPage from '../Pages/SeoPage';
+import Saas from '../Pages/Saas';
 
 const Home = () => {
  
@@ -29,6 +34,7 @@ const Home = () => {
     
    
         <Navbar/>
+        <Saas/>
         <Hero/>
         <Hero2/>
         <Hero3/>
