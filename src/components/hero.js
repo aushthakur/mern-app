@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import mobileImage from '../img/mobileview.png';
-import heroImage from '../img/Home.png';
+import mobileImage from '../img/Podcast-cuate 1.png';
+import heroImage from '../img/Podcast-cuate 1.png';
 import { FaLinkedin, FaInstagram, FaTelegram, FaFacebook, FaTwitter, FaTimes } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ClipLoader } from 'react-spinners'; // For loading animation
 import { FloatingWhatsApp } from 'react-floating-whatsapp'; // Correct import
+import '../styles/hero.css';
 
 const SocialLink = ({ href, icon: Icon, colorClass }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className={`hover:text-gray-400 ${colorClass}`}>
@@ -52,62 +53,51 @@ const Hero = () => {
   };
 
   return (
-    <section className="  text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
-      <div className="absolute inset-0 bg-cover bg-center brightness-110  sm:p-0 h-full w-full">
-        <img src={heroImage} alt="" className="hidden overflow-hidden md:block mt-9 w-full h-full object-cover" />
-        <img src={mobileImage} alt="" className="md:hidden w-full object-cover" />
-      </div>
-      <div className="relative z-10 container mx-auto px-4 flex justify-between items-center mt-12">
-        <div className="">
-        <h1 className="text-black tracking-wider mt-4 text-left sm:mb-8 mb-4 md:mb-2 lg:mt-9">
-  <div className="sm:hidden mt-6 bg-white p-4 rounded-lg text-base leading-tight max-w-xs mx-auto"> {/* Mobile view */}
-  Empowering Global Business<span className="text-[#ff3131] font-extrabold">Growth </span>through Digital Marketing <span className="text-[#ff3131] font-extrabold">& B2B Podcasts</span>.
-  </div>
-
+    <section className="text-white p-6 relative h-screen w-full flex md:items-center lg:overflow-hidden sm:items-end">
+    <div className="absolute inset-0 bg-cover bg-center brightness-110 sm:p-0 h-full w-full">
+      <img src={heroImage} alt="" className="hidden overflow-hidden md:block w-[455px] h-full object-cover ml-auto" />
+      <img src={mobileImage} alt="" className="md:hidden w-full object-cover sm:mt-auto sm:absolute sm:bottom-0 sm:w-full" />
+    </div>
   
-  <div className="hidden sm:block text-lg sm:text-xl md:text-2xl lg:text-4xl"> {/* Larger screens */}
-  Empowering Global Business
-  Growth through<span className="text-[#ff3131] font-extrabold"> Digital Marketing </span> 
-    and <span className="text-[#ff3131] font-extrabold">& B2B Podcasts</span>.
-  </div>
-</h1>
-<p className="text-black sm:hidden md:block lg:block " >Boostpod, a vertical of <span className='text-[#ff3131] font-bold'>Techno E-Services Group Ltd.</span>
-  in the UK, is pioneering business growth by merging digital marketing expertise 
-  with a unique B2B podcast series. Our podcasts feature leading entrepreneurs and
-  industry trailblazers sharing their journeys, challenges, and strategies for scaling 
-  success. At Boostpod, we’re more than a digital agency; we’re a platform connecting 
-  global brands through insightful, actionable content designed to inspire and drive results.</p>
-
-
+    <div className="relative z-10 container mx-auto px-4 flex sm:flex-col sm:items-center sm:text-center md:flex-row md:items-start md:text-left gap-2">
+      <div className="sm:w-full sm:text-center sm:mt-6 md:w-auto md:text-left md:mt-20"> {/* Added margin for full-width */}
+        <h1 className="text-black tracking-wider mt-4 text-left sm:mt-6 mb-4 md:mb-2">
+          <div className="contents font-extrabold hidden sm:block text-lg sm:text-xl md:text-2xl lg:text-5xl">
+            Fueling Global <br />Growth with<br />
+            <span className="text-[#ff3131] font-extrabold">Digital Marketing</span> & <br />
+            <span className="text-[#ff3131] font-extrabold">B2B Podcasts</span>
+          </div>
+        </h1>
+        <p className="text-black sm:hidden md:block lg:block">
+          Join industry leaders sharing real journeys, challenges, and 
+          <br />growth strategies, connecting global brands with insights that inspire results
+        </p>
+        <div className="sm:w-full sm:flex sm:justify-center sm:mt-12 md:w-auto md:flex md:justify-start">
           <button
-            className="bg-[#ff3131] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 sm:mb-32 sm:text-sm md:text-lg hover:bg-black text-white text-xl font-bold py-2 px-4 mt-5 letter-spacing: 0.025em rounded"
+            className="btn bg-[#ff3131] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 sm:mb-32 sm:text-sm md:text-lg hover:bg-black text-white text-xl font-bold py-2 px-4 mt-5 letter-spacing: 0.025em rounded"
             onClick={handleGetQuote}
           >
             Get a Quote
           </button>
         </div>
-        <div className="hidden md:flex flex-col space-y-5 fixed right-0 top-1/2 transform -translate-y-1/2 mr-4">
-          <SocialLink href="https://www.linkedin.com/company/digital-drive-solution/about/" icon={FaLinkedin} colorClass={iconColor} />
-          <SocialLink href="https://www.instagram.com/digitaldrive.solution/" icon={FaInstagram} colorClass={iconColor} />
-          <SocialLink href="https://t.me/digitaldrivesolution" icon={FaTelegram} colorClass={iconColor} />
-          <SocialLink href="https://www.facebook.com/profile.php?id=61561321901474" icon={FaFacebook} colorClass={iconColor} />
-          <SocialLink href="https://www.twitter.com" icon={FaTwitter} colorClass={iconColor} />
-        </div>
       </div>
-      {showCookies && <CookieNotice onClose={handleCloseCookies} />}
-      {showModal && <QuoteModal onClose={handleCloseModal} />}
-      <ToastContainer />
-
-      {/* Floating WhatsApp Button */}
-      <FloatingWhatsApp
-        phoneNumber="+447435632174" // Replace with your desired phone number
-        accountName="Sophia"
-        allowEsc
-        allowClickAway
-        notification
-        notificationSound
-      />
-    </section>
+    </div>
+  
+    {showCookies && <CookieNotice onClose={handleCloseCookies} />}
+    {showModal && <QuoteModal onClose={handleCloseModal} />}
+    <ToastContainer />
+  
+    {/* Floating WhatsApp Button */}
+    <FloatingWhatsApp
+      phoneNumber="+447435632174" // Replace with your desired phone number
+      accountName="Sophia"
+      allowEsc
+      allowClickAway
+      notification
+      notificationSound
+    />
+  </section>
+  
   );
 };
 

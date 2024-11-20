@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+    .Podcast {
+      /* display: none; */
+    }
+    .Microphone{
+        display: none;
+    }
+    .content{
+        margin-bottom: 21px;
+    }
+    .hh{
+        margin-bottom: 32px;
+    }
+}
+

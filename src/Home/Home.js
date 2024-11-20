@@ -16,9 +16,7 @@ import SeoPage from '../Pages/SeoPage';
 import Saas from '../Pages/Saas';
 
 const Home = () => {
- 
 
-  
   return (
     <>
     <div className="app-container">
@@ -26,13 +24,8 @@ const Home = () => {
   
       { (
         // Your application content
-        <div>
-          <h1>Welcome to my app!</h1>
-          {/* <!-- Your app content here --> */}
-        </div>
+          <></>
       )}
-    
-   
         <Navbar/>
         <Saas/>
         <Hero/>

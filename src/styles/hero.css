@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .contents{
+       margin-top: 55px;
+       text-align: center;
+       height: 54px;
+       width: 256px;
+    }
+    .btn{
+        margin-top: 43px;
+    }
+}
